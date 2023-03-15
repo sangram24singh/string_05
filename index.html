@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handson 5 javascript </title>
+</head>
+<style>
+    .main{
+        background-image: linear-gradient(orange, white,green);
+        border: 10px solid black;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .box{
+        width: 460px;
+        height: auto;
+        margin: 10px;
+        background-color: rgb(16, 255, 179);
+        border: 10px double black;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="box"><h1>Count Characters</h1>
+        <pre>const countCharacters = (S) => 
+{
+let a=0;
+  let d=0;
+  for(i=0;i < S.length;i++){
+    if(S.charAt(i) ==='A'){
+      a++;
+    }
+     else if(S.charAt(i)=='D'){
+       d++;
+       
+     }
+    
+  }
+  
+  let ans= [a,d];
+  return ans;
+};</pre></div>
+<div class="box"><h1>Count the Heads</h1>
+<pre>var Count_Occ = (s) => 
+{
+  let n=s.length;
+  let str = s.split("").sort().join("");
+  let ans="";
+  for (let i=0;i < n;i++){
+    let count = 0;
+    for (let j=0; j < n;j++){
+      if (str[i]===str[j] && i>j){
+        break;
+      }
+      if (str[i]===str[j]){
+        count+=1;
+      }
+    }
+    if (count>1){
+      ans+=str[i]+count;
+    }
+  }
+  return ans;
+};
+ </pre></div>
+ <div class="box"><h1>Count the Vowels</h1><pre>var Count_Vowels= (S) => 
+{
+     let count = 0;
+      for (i=0;i < S.length;i++){
+        if(S[i]==='a'||S[i]==='e'||S[i]==='i'||S[i]==='o'||S[i]==='u')
+          count++;
+        }
+        return count;
+};</pre></div>
+<div class="box"><h1>Concatenate the Strings</h1><pre>var Concatenate_Strings = (S1, S2) => 
+{
+      let sum = S1+""+S2
+      return sum;
+};</pre></div>
+<div class="box"><h1>Find Length</h1><pre>const findLength = (S) => 
+{
+    let len = 0;
+    for (i=0;i < S.length;i++)
+    {
+      len+=1;
+    }
+    return len;
+};</pre></div>
+<div class="box"><h1>Find the Winner</h1><pre>var Game_Winner = (S) => 
+{
+  let countA=0;
+  let countD=0;
+  for (i=0;i < S.length;i++)
+  {
+    if (S.charAt(i)==="A")
+    {
+      countA++;
+    }
+    else if (S.charAt(i)==="D")
+    {
+      countD++;
+    }
+  }
+    if (countA>countD)
+    {
+      return "Aditya";
+    }
+    else if (countA < countD)
+    {
+      return "Danish";
+    }
+    else 
+    {
+      return "Draw";
+    }
+    
+};</pre></div>
+<div class="box"><h1>Join Strings</h1><pre>
+const joinStrings = (S, P) => 
+{
+    let a = (S+""+P);
+    return a;
+};
+ </pre></div>
+ <div class="box"><h1>Plaindrome Check</h1><pre>var Palin_Check = (str) =>
+{
+	  let ans="";
+  for(let i=str.length-1;i>=0;i--){
+    ans+=str[i];
+  }
+  if(ans===str){
+    return "True" 
+  }
+  else{
+     return "False"
+  }
+}</pre></div>
+<div class="box"><h1>Reverse the String</h1><pre>var Reverse_String = (str) => 
+{
+     let store = "";
+     for (i=str.length-1;i>=0;i--)
+     {
+       store+=str[i];
+     }
+     return store;
+};</pre></div>
+<div class="box"><h1>Match the Strings</h1><pre>var String_Match = (S1,S2) => 
+{
+     if (S1===S2)
+     {
+       return "YES"
+     }
+     else {
+       return "NO"
+     }
+};
+ </pre></div>
+ <div class="box"><h1>String Replace</h1><pre>var Replace = (S, pattern , text) => 
+{
+      let ans = S.replace(pattern, text);
+      return ans;
+};
+ </pre></div>
+ <div class="box"><h1>Split the String</h1><pre>var Split_the_string = (S) => 
+{
+  let ans = S.split(" ");
+  return ans;
+        
+};</pre></div>
+<div class="box"><h1>Count the Vowels and Consonants</h1><pre>var Count_Vowels= (S) => 
+{
+ let countv=0;
+ 
+for(let i=0;i < S.length;i++){
+  
+  if(S.charAt(i)=='a'||S.charAt(i)=='e'||S.charAt(i)=='i' 
+  || S.charAt(i)=='o'||S.charAt(i)=='u') {
+    countv++;
+  }
+}
+return countv;
+     
+};
+var Count_Consonants= (S) => 
+{
+   let countc=0;
+ 
+for(let j=0;j < S.length;j++){
+  
+  if(S.charAt(j)!=='a'&&S.charAt(j)!=='e'&&S.charAt(j)!=='i' 
+  && S.charAt(j)!=='o'&&S.charAt(j)!=='u') {
+    countc++;
+  }
+}
+return countc;     
+};</pre></div>
+
+</div>
+    
+</body>
+</html>
